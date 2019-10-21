@@ -65,3 +65,9 @@ import '@microfrontends-demo/ui';
 To Share models between frontend and backend just do:
 
 nx g @nrwl/web:lib data
+
+9. start microfrontends and shell
+
+ng serve --project microfrontend1 --single-bundle --port 4231
+ng serve --project microfrontend1 --single-bundle --port 4232
+ng serve --project app-shell

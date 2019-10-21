@@ -1,3 +1,5 @@
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
 export class SeverityIcon extends HTMLElement {
   connectedCallback() {
     this.renderSeverityIcon();
@@ -8,4 +10,6 @@ export class SeverityIcon extends HTMLElement {
   }
 }
 
-customElements.define('microfrontends-demo-severity-icon', SeverityIcon);
+if (!customElements.get('microfrontends-demo-severity-icon')) {
+  customElements.define('microfrontends-demo-severity-icon', SeverityIcon);
+}
