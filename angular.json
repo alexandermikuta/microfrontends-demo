@@ -21,9 +21,7 @@
               "apps/app-shell/src/favicon.ico",
               "apps/app-shell/src/assets"
             ],
-            "styles": [
-              "apps/app-shell/src/styles.css"
-            ],
+            "styles": ["apps/app-shell/src/styles.css"],
             "scripts": []
           },
           "configurations": {
@@ -82,10 +80,7 @@
               "apps/app-shell/tsconfig.app.json",
               "apps/app-shell/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/app-shell/**"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/app-shell/**"]
           }
         },
         "test": {
@@ -119,13 +114,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "apps/app-shell-e2e/tsconfig.e2e.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/app-shell-e2e/**"
-            ]
+            "tsConfig": ["apps/app-shell-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/app-shell-e2e/**"]
           }
         }
       }
@@ -150,9 +140,7 @@
               "apps/microfrontend1/src/favicon.ico",
               "apps/microfrontend1/src/assets"
             ],
-            "styles": [
-              "apps/microfrontend1/src/styles.css"
-            ],
+            "styles": ["apps/microfrontend1/src/styles.css"],
             "scripts": []
           },
           "configurations": {
@@ -211,10 +199,7 @@
               "apps/microfrontend1/tsconfig.app.json",
               "apps/microfrontend1/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/microfrontend1/**"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/microfrontend1/**"]
           }
         },
         "test": {
@@ -248,13 +233,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "apps/microfrontend1-e2e/tsconfig.e2e.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/microfrontend1-e2e/**"
-            ]
+            "tsConfig": ["apps/microfrontend1-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/microfrontend1-e2e/**"]
           }
         }
       }
@@ -279,9 +259,7 @@
               "apps/microfrontend2/src/favicon.ico",
               "apps/microfrontend2/src/assets"
             ],
-            "styles": [
-              "apps/microfrontend2/src/styles.css"
-            ],
+            "styles": ["apps/microfrontend2/src/styles.css"],
             "scripts": []
           },
           "configurations": {
@@ -340,10 +318,7 @@
               "apps/microfrontend2/tsconfig.app.json",
               "apps/microfrontend2/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/microfrontend2/**"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/microfrontend2/**"]
           }
         },
         "test": {
@@ -377,13 +352,33 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
+            "tsConfig": ["apps/microfrontend2-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/microfrontend2-e2e/**"]
+          }
+        }
+      }
+    },
+    "ui": {
+      "root": "libs/ui",
+      "sourceRoot": "libs/ui/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
             "tsConfig": [
-              "apps/microfrontend2-e2e/tsconfig.e2e.json"
+              "libs/ui/tsconfig.lib.json",
+              "libs/ui/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/microfrontend2-e2e/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/ui/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ui/jest.config.js",
+            "tsConfig": "libs/ui/tsconfig.spec.json"
           }
         }
       }

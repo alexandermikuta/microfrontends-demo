@@ -25,6 +25,9 @@
     },
     "microfrontend2": {
       "tags": []
+    },
+    "ui": {
+      "tags": []
     }
   }
 }
