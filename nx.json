@@ -19,6 +19,12 @@
     },
     "microfrontend1": {
       "tags": []
+    },
+    "microfrontend2-e2e": {
+      "tags": []
+    },
+    "microfrontend2": {
+      "tags": []
     }
   }
 }
