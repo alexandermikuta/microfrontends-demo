@@ -71,6 +71,6 @@ schemas: [CUSTOM_ELEMENTS_SCHEMA],
 
 ```
 ng serve --project microfrontend1 --single-bundle --port 4231
-ng serve --project microfrontend1 --single-bundle --port 4232
+ng serve --project microfrontend2 --single-bundle --port 4232
 ng serve --project app-shell
 ```
