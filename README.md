@@ -60,8 +60,11 @@ ng add ngx-build-plus --project microfrontend2
 ng add @nrwl/web
 ng g @nrwl/web:lib ui
 
-// this library can be imported into the single microfrontend-apps via:
+// this library can be imported into the single microfrontend-apps in main.ts via:
 import '@microfrontends-demo/ui';
+
+// add CUSTOM_ELEMENTS_SCHEMA to app.module.ts of the single microfrontend-apps
+schemas: [CUSTOM_ELEMENTS_SCHEMA],
 ```
 
 ## start microfrontends and shell
