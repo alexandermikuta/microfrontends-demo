@@ -119,6 +119,125 @@
           }
         }
       }
+    },
+    "microfrontend1": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "apps/microfrontend1",
+      "sourceRoot": "apps/microfrontend1/src",
+      "prefix": "microfrontends-demo",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/microfrontend1",
+            "index": "apps/microfrontend1/src/index.html",
+            "main": "apps/microfrontend1/src/main.ts",
+            "polyfills": "apps/microfrontend1/src/polyfills.ts",
+            "tsConfig": "apps/microfrontend1/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "apps/microfrontend1/src/favicon.ico",
+              "apps/microfrontend1/src/assets"
+            ],
+            "styles": ["apps/microfrontend1/src/styles.css"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/microfrontend1/src/environments/environment.ts",
+                  "with": "apps/microfrontend1/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "microfrontend1:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "microfrontend1:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "microfrontend1:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/microfrontend1/tsconfig.app.json",
+              "apps/microfrontend1/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/microfrontend1/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/microfrontend1/jest.config.js",
+            "tsConfig": "apps/microfrontend1/tsconfig.spec.json",
+            "setupFile": "apps/microfrontend1/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "microfrontend1-e2e": {
+      "root": "apps/microfrontend1-e2e",
+      "sourceRoot": "apps/microfrontend1-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/microfrontend1-e2e/cypress.json",
+            "tsConfig": "apps/microfrontend1-e2e/tsconfig.e2e.json",
+            "devServerTarget": "microfrontend1:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "microfrontend1:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/microfrontend1-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/microfrontend1-e2e/**"]
+          }
+        }
+      }
     }
   },
   "cli": {

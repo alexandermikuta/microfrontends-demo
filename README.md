@@ -27,5 +27,5 @@ ng add @angular/elements
 6. generate microfrontend-apps
 
 ng g @nrwl/angular:application app-shell
-ng g @nrwl/angular:application microfrontend-1
-ng g @nrwl/angular:application microfrontend-2
+ng g @nrwl/angular:application microfrontend1
+ng g @nrwl/angular:application microfrontend2
