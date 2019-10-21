@@ -28,7 +28,11 @@
     "help": "nx help"
   },
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "@angular/elements": "8.2.11",
+    "@nrwl/angular": "8.6.0",
+    "document-register-element": "^1.7.2"
+  },
   "devDependencies": {
     "@angular/cli": "8.3.3",
     "@nrwl/workspace": "8.6.0",
