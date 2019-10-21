@@ -29,3 +29,8 @@ ng add @angular/elements
 ng g @nrwl/angular:application app-shell
 ng g @nrwl/angular:application microfrontend1
 ng g @nrwl/angular:application microfrontend2
+
+7. add ngx-build-plus for microfrontends
+
+ng add ngx-build-plus --project microfrontend1
+ng add ngx-build-plus --project microfrontend2

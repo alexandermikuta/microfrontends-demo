@@ -21,7 +21,9 @@
               "apps/app-shell/src/favicon.ico",
               "apps/app-shell/src/assets"
             ],
-            "styles": ["apps/app-shell/src/styles.css"],
+            "styles": [
+              "apps/app-shell/src/styles.css"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -80,7 +82,10 @@
               "apps/app-shell/tsconfig.app.json",
               "apps/app-shell/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/app-shell/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/app-shell/**"
+            ]
           }
         },
         "test": {
@@ -114,8 +119,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/app-shell-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/app-shell-e2e/**"]
+            "tsConfig": [
+              "apps/app-shell-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/app-shell-e2e/**"
+            ]
           }
         }
       }
@@ -128,7 +138,7 @@
       "prefix": "microfrontends-demo",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "ngx-build-plus:browser",
           "options": {
             "outputPath": "dist/apps/microfrontend1",
             "index": "apps/microfrontend1/src/index.html",
@@ -140,7 +150,9 @@
               "apps/microfrontend1/src/favicon.ico",
               "apps/microfrontend1/src/assets"
             ],
-            "styles": ["apps/microfrontend1/src/styles.css"],
+            "styles": [
+              "apps/microfrontend1/src/styles.css"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -176,7 +188,7 @@
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "ngx-build-plus:dev-server",
           "options": {
             "browserTarget": "microfrontend1:build"
           },
@@ -199,11 +211,14 @@
               "apps/microfrontend1/tsconfig.app.json",
               "apps/microfrontend1/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/microfrontend1/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/microfrontend1/**"
+            ]
           }
         },
         "test": {
-          "builder": "@nrwl/jest:jest",
+          "builder": "ngx-build-plus:karma",
           "options": {
             "jestConfig": "apps/microfrontend1/jest.config.js",
             "tsConfig": "apps/microfrontend1/tsconfig.spec.json",
@@ -233,8 +248,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/microfrontend1-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/microfrontend1-e2e/**"]
+            "tsConfig": [
+              "apps/microfrontend1-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/microfrontend1-e2e/**"
+            ]
           }
         }
       }
@@ -247,7 +267,7 @@
       "prefix": "microfrontends-demo",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "ngx-build-plus:browser",
           "options": {
             "outputPath": "dist/apps/microfrontend2",
             "index": "apps/microfrontend2/src/index.html",
@@ -259,7 +279,9 @@
               "apps/microfrontend2/src/favicon.ico",
               "apps/microfrontend2/src/assets"
             ],
-            "styles": ["apps/microfrontend2/src/styles.css"],
+            "styles": [
+              "apps/microfrontend2/src/styles.css"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -295,7 +317,7 @@
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "ngx-build-plus:dev-server",
           "options": {
             "browserTarget": "microfrontend2:build"
           },
@@ -318,11 +340,14 @@
               "apps/microfrontend2/tsconfig.app.json",
               "apps/microfrontend2/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/microfrontend2/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/microfrontend2/**"
+            ]
           }
         },
         "test": {
-          "builder": "@nrwl/jest:jest",
+          "builder": "ngx-build-plus:karma",
           "options": {
             "jestConfig": "apps/microfrontend2/jest.config.js",
             "tsConfig": "apps/microfrontend2/tsconfig.spec.json",
@@ -352,8 +377,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/microfrontend2-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/microfrontend2-e2e/**"]
+            "tsConfig": [
+              "apps/microfrontend2-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/microfrontend2-e2e/**"
+            ]
           }
         }
       }
