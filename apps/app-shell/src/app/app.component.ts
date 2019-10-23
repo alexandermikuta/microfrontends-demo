@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'microfrontends-demo-root',
+  selector: 'microfrontends-demo-root-app',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
@@ -12,12 +12,12 @@ export class AppComponent implements OnInit {
     microfrontend1: {
       loaded: false,
       path: 'http://localhost:4231/main.js',
-      element: 'microfrontends-demo-root1'
+      element: 'microfrontends-demo-root'
     },
     microfrontend2: {
       loaded: false,
       path: 'http://localhost:4232/main.js',
-      element: 'microfrontends-demo-root2'
+      element: 'microfrontends-demo-root'
     }
   }
 

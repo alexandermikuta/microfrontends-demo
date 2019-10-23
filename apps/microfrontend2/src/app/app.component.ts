@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'microfrontends-demo-root2',
+  selector: 'microfrontends-demo-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
