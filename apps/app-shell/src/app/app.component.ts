@@ -18,9 +18,13 @@ export class AppComponent implements OnInit {
       loaded: false,
       path: 'http://localhost:4232/main.js',
       element: 'microfrontends-demo-root'
+    },
+    search: {
+      loaded: false,
+      path: 'http://localhost:4233/main.js',
+      element: 'gs-nx-root'
     }
-  }
-
+  };
 
   ngOnInit() {
     this.load('microfrontend1');
