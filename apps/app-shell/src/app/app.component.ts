@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'shell';
+  public selectedElement: string;
 
   config = {
     microfrontend1: {
@@ -31,6 +32,7 @@ export class AppComponent implements OnInit {
   }
 
   load(name: string) {
+    this.selectedElement = name;
     const configItem = this.config[name];
 
     if (configItem.loaded) {

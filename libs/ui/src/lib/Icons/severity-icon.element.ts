@@ -6,7 +6,7 @@ export class SeverityIcon extends HTMLElement {
   }
 
   private renderSeverityIcon() {
-    this.innerHTML = `<p>severity-Icon...</p>`;
+    this.innerHTML = `<p style="background: blue; width: 200px; height: 200px; color: white">This is a shared component...</p>`;
   }
 }
 

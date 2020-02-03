@@ -1,8 +1,33 @@
 <nav>
   <ul>
-    <li><a href="#" (click)="load('microfrontend1')">Microfrontend 1</a></li>
-    <li><a href="#" (click)="load('microfrontend2')">Microfrontend 2</a></li>
-    <li><a href="#" (click)="load('search')">Search</a></li>
+    <li>
+      <a
+        href="#"
+        [className]="
+          selectedElement === 'microfrontend1' ? 'selected' : 'not-selected'
+        "
+        (click)="load('microfrontend1')"
+        >Microfrontend 1</a
+      >
+    </li>
+    <li>
+      <a
+        href="#"
+        [className]="
+          selectedElement === 'microfrontend2' ? 'selected' : 'not-selected'
+        "
+        (click)="load('microfrontend2')"
+        >Microfrontend 2</a
+      >
+    </li>
+    <li>
+      <a
+        href="#"
+        [className]="selectedElement === 'search' ? 'selected' : 'not-selected'"
+        (click)="load('search')"
+        >Search</a
+      >
+    </li>
   </ul>
 </nav>
 <main id="content"></main>
