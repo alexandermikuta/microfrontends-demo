@@ -9,19 +9,22 @@
   },
   "projects": {
     "app-shell-e2e": {
-      "tags": []
+      "tags": [],
+      "implicitDependencies": ["app-shell"]
     },
     "app-shell": {
       "tags": []
     },
     "microfrontend1-e2e": {
-      "tags": []
+      "tags": [],
+      "implicitDependencies": ["microfrontend1"]
     },
     "microfrontend1": {
       "tags": []
     },
     "microfrontend2-e2e": {
-      "tags": []
+      "tags": [],
+      "implicitDependencies": ["microfrontend2"]
     },
     "microfrontend2": {
       "tags": []
